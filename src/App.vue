@@ -1,7 +1,15 @@
 <script setup>
-import { RouterView } from 'vue-router';
+import { RouterView, useRoute, onBeforeRouteUpdate } from 'vue-router';
 import Navbar from './components/Navbar.vue';
 import Footer from './components/Footer.vue';
+const route = useRoute();
+
+const updateTitle = () => {
+  const title = route.meta.title || 'Default Title'; // Replace 'Default Title' with your default title
+  document.title = `${title} - Your Site Name`; // Update 'Your Site Name' with your actual site name
+};
+
+
 
 </script>
 
