@@ -1,5 +1,5 @@
 <template>
-  <nav class="flex items-center sm:flex-row flex-col px-4 justify-between align-centre sm:text-2xl text-s">
+  <nav class="flex items-center sm:flex-row flex-col px-4 justify-between align-centre sm:text-xl text-xs">
     <ul class="flex sm:flex-row flex-col px-4 py-5 items-center sm:ml-12">
       <li v-for="(navLink, index) in navLinks" :key="navLink.id" class="mr-5 mb-5 sm:mb-0">
         <a :href="`${navLink.id}`">

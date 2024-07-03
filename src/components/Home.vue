@@ -32,7 +32,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <main class="main-container grid sm:grid-cols-2 grid-cols-1 flex-col sm:items-center items-start justify-between sm:grid-cols-[1.5fr_5fr] sm:grid-rows-1 grid-rows-[0.6fr_3fr] h-full">
+  <main class="main-container grid sm:grid-cols-2 grid-cols-1 flex-col sm:items-center items-start justify-between sm:grid-cols-[1.5fr_5fr] sm:grid-rows-1 gap-y-12 grid-rows-[0.3fr_3fr] h-full">
     <div class="sm:col-start-1 sm:mb-[40%] mt-10">
       <img :src="meImage" alt="meImage" class="sm:w-[180px] sm:h-[180px] md:w-[350px] md:h-[350px] rounded-2xl">
     </div>
