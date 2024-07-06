@@ -37,7 +37,7 @@ onMounted(() => {
       <img :src="meImage" alt="meImage" class="sm:w-[180px] sm:h-[180px] md:w-[350px] md:h-[350px] rounded-2xl">
     </div>
     <div class="about_me sm:col-start-2 justify-start text-start">
-      <p class="text-white pb-20 sm:text-2xl text-center tracking-wide">
+      <p class="text-white pb-20 sm:text-2xl text-justify hyphens-auto">
         I am a highly motivated and technically proficient Computing Science graduate with a robust background in full-stack web development. My expertise spans both front-end and back-end technologies, with particular strengths in Python, React, Java, and Android application development. My hands-on experience includes Agile methodologies, requirements capture, and project lifecycle management.
 
 I excel in enhancing user experiences and developing scalable, modular architectures. My collaborative approach with stakeholders ensures thorough testing and debugging, and I am dedicated to maintaining high-performance APIs. With excellent communication skills and a strong understanding of programming concepts, I am eager to contribute to innovative projects, particularly in the field of public safety technology.

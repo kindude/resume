@@ -1,6 +1,17 @@
 <template>
-  <nav class="flex items-center sm:flex-row flex-col px-4 justify-between align-centre sm:text-xl text-xs">
-    <ul class="flex sm:flex-row flex-col px-4 py-5 items-center sm:ml-12">
+  <nav class="flex items-center sm:flex-row flex-col px-4 justify-between align-center sm:text-xl text-xs">
+    <!-- Logo -->
+
+    
+    <!-- Hamburger menu button for small screens -->
+    <button class="sm:hidden" @click="toggleMenu">
+      <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+      </svg>
+    </button>
+
+    <!-- Navigation links -->
+    <ul :class="{ 'hidden': !showMenu }" class="flex sm:flex-row flex-col px-4 py-5 items-center sm:ml-12">
       <li v-for="(navLink, index) in navLinks" :key="navLink.id" class="mr-5 mb-5 sm:mb-0">
         <a :href="`${navLink.id}`">
           {{ navLink.title }}
@@ -10,6 +21,7 @@
     <div title="KINDUDE" class="md:block hidden sm:mr-[20%] text-7xl logo">
       KINDUDE
     </div>
+    <!-- Logo image -->
     <div class="flex justify-center items-center">
       <img :src="logoSrc" alt="Logo" class="logo-image" @mouseenter="handleMouseEnter" @mouseleave="handleMouseLeave"
         @click="emitStartAudio">
@@ -21,7 +33,14 @@
 import { ref } from 'vue';
 import { navLinks } from '../constants';
 import logoSrc from '@/assets/logo.png';
-let isPlaying = false
+
+let isPlaying = false;
+const showMenu = ref(false);
+
+const toggleMenu = () => {
+  showMenu.value = !showMenu.value;
+  console.log('s');
+};
 
 
 const emitStartAudio = () => {
@@ -88,8 +107,8 @@ a:hover {
 }
 
 .logo-image {
-  width: 65%;
-  height: 65%;
+  width: 80%;
+  height: 80%;
   transition: transform 0.3s ease-in-out;
   /* Transition property added */
 }
@@ -141,5 +160,43 @@ a:hover {
   }
 }
 
-@media only screen and (max-width: 640px) {}
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+button svg {
+  fill: white;
+}
+
+@media only screen and (min-width: 640px) {
+  /* Hide hamburger button on larger screens */
+  button {
+    display: none;
+  }
+  
+  /* Show navigation links in row layout on larger screens */
+  ul {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  /* Hide navigation links by default and show when menu is toggled */
+  ul {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem; /* Adjust as per your design */
+  }
+
+  /* Show navigation links when menu is toggled */
+  ul:not(.hidden) {
+    display: flex;
+  }
+}
+
+
 </style>

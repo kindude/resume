@@ -15,7 +15,7 @@ const updateTitle = () => {
 
 <template>
   <div
-    class="wrapper min-h-screen w-full grid grid-cols-[0.3fr_10fr] sm:grid-cols-1 sm:grid-rows-[0.1fr_2.5fr_1.5fr] grid-rows-[80%_20%] sm:gap-y-0 bg-almost-black"
+    class="wrapper min-h-screen w-full grid grid-cols-[3fr_10fr] sm:grid-cols-1 sm:grid-rows-[0.1fr_2.5fr_1.5fr] grid-rows-[80%_20%] sm:gap-y-0 bg-almost-black"
     id="app">
     <div
       class="nav bg-black text-white row-start-1 row-end-1 sm:col-start-1 sm:col-end-3 sm:row-start-1 sm:row-end-1 sm:flex-row bg-almost-black text-light-grey mt-10 sm:mt-3 sm:pb-10">
