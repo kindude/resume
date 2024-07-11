@@ -34,7 +34,7 @@ onMounted(() => {
       <img :src="meImage" alt="meImage" class="image sm:w-[180px] sm:h-[180px] md:w-[350px] md:h-[350px] rounded-2xl">
     </div>
     <div class="about_me sm:col-start-2 justify-start text-start sm:px-6 md:px-12">
-      <h1 class="text-white sm:text-5xl text-3xl mb-3">Hi, my name is Yehor Dudnik</h1>
+      <h1 class="text-white sm:text-5xl text-3xl mb-7">Hi, my name is Yehor Dudnik</h1>
       <p class="text-white pb-20 sm:text-2xl text-justify hyphens-auto md:leading-10">
         I am a highly motivated and technically proficient Computing Science graduate with a robust background in full-stack web development. My expertise spans both front-end and back-end technologies, with particular strengths in Python, React, Java, and Android application development. My hands-on experience includes Agile methodologies, requirements capture, and project lifecycle management.
 
