@@ -30,12 +30,12 @@ onMounted(() => {
 
 <template>
   <main class="main-container grid sm:grid-cols-2 grid-cols-1 flex-col sm:items-center items-start justify-between sm:grid-cols-[1.5fr_5fr] sm:grid-rows-1 grid-rows-[0.3fr_3fr] h-full">
-    <div class="image-container sm:col-start-1 sm:mb-[40%] mt-10">
+    <div class="image-container sm:col-start-1 sm:mb-[60%] mt-10">
       <img :src="meImage" alt="meImage" class="image sm:w-[180px] sm:h-[180px] md:w-[350px] md:h-[350px] rounded-2xl">
     </div>
     <div class="about_me sm:col-start-2 justify-start text-start sm:px-6 md:px-12">
       <h1 class="text-white sm:text-5xl text-3xl mb-3">Hi, my name is Yehor Dudnik</h1>
-      <p class="text-white pb-20 sm:text-2xl text-justify hyphens-auto">
+      <p class="text-white pb-20 sm:text-2xl text-justify hyphens-auto md:leading-10">
         I am a highly motivated and technically proficient Computing Science graduate with a robust background in full-stack web development. My expertise spans both front-end and back-end technologies, with particular strengths in Python, React, Java, and Android application development. My hands-on experience includes Agile methodologies, requirements capture, and project lifecycle management.
 
         I excel in enhancing user experiences and developing scalable, modular architectures. My collaborative approach with stakeholders ensures thorough testing and debugging, and I am dedicated to maintaining high-performance APIs. With excellent communication skills and a strong understanding of programming concepts, I am eager to contribute to innovative projects, particularly in the field of public safety technology.
