@@ -17,7 +17,7 @@ export const navLinks = [
 ];
 
 export const footerLinks = [
-  { id: 'github', title: 'GitHub', url: 'https://github.com/', logoURL: githubLogo },
+  { id: 'github', title: 'GitHub', url: 'https://github.com/kindude', logoURL: githubLogo },
   { id: 'linkedin', title: 'LinkedIn', url: 'https://www.linkedin.com/in/kindude/', logoURL: linkedinLogo },
 ];
 
