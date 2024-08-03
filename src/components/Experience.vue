@@ -1,29 +1,30 @@
 <template>
-    <div class="mx-auto sm:pt-10 pt-8 sm:pr-0 pr-4">
-      <div class="sm:text-5xl text-3xl font-bold mb-4 text-white sm:mb-24 mb-12">
-        Experience
-      </div>
+  <div class="mx-auto sm:pt-10 pt-8 sm:pr-0 pr-4">
+    <div class="sm:text-5xl text-3xl text-white font-bold mb-8">Experience</div>
     
-      <div v-for="(item, index) in experience" :key="index" class="mb-10 sm:pl-24 sm:pr-24">
-        <button @click="toggleDropdown(index)" class="gradient-red-white w-full text-left sm:h-[100px] text-center font-bold bg-gray-200 p-2 rounded-md sm:text-3xl">
+    <!-- Experience Details -->
+    <div class="experience-details mb-10">
+      <div v-for="(item, index) in experience" :key="index" class="experience-section mb-4">
+        <div class="experience-header bg-gray-800 p-3 rounded-xl text-white text-3xl font-bold border border-white">
           {{ item.title }} – {{ item.company }} | {{ item.dates }}
-        </button>
-        <div v-if="dropdownOpen[index]" class="p-4 border border-gray-300 rounded-md">
-          <ul class="list-disc list-inside py-4">
-            <li class="text-white sm:text-xl text-s" v-for="(task, idx) in item.tasks" :key="idx">{{ task }}</li>
+        </div>
+        <div class="tasks-list bg-gray-900 p-3 rounded-md mt-2">
+          <ul class="list-disc list-inside text-white">
+            <li v-for="(task, idx) in item.tasks" :key="idx" class="task-item py-1">
+              {{ task }}
+            </li>
           </ul>
         </div>
       </div>
     </div>
-  </template>
-  
-  <script>
-  import { reactive } from 'vue';
-  
-  export default {
-    setup() {
-      const dropdownOpen = reactive({});
-      const experience = [
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      experience: [
         {
           title: 'FullStack Junior Web Developer',
           company: 'CSD LAB',
@@ -80,24 +81,39 @@
             'Enhanced security and data visualization'
           ]
         }
-      ];
-  
-      const toggleDropdown = (index) => {
-        dropdownOpen[index] = !dropdownOpen[index];
-      };
-  
-      return {
-        dropdownOpen,
-        experience,
-        toggleDropdown
-      };
-    }
-  };
-  </script>
-  
-  <style scoped>
-.gradient-red-white {
-    background: linear-gradient(to right, white, white);
+      ]
+    };
   }
-  </style>
-  
+};
+</script>
+
+<style scoped>
+.experience-details {
+  max-height: calc(100vh);
+  overflow-y: auto;
+}
+
+.experience-section {
+  margin-bottom: 16px;
+}
+
+.experience-header {
+  background-color: #333;
+  color: white;
+  font-size: 1.875rem; 
+  padding: 1rem;
+  border-radius: 0.75rem;
+  border: 2px solid white;
+}
+
+.tasks-list {
+  background-color: #222; 
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.task-item {
+  margin-bottom: 0.5rem;
+}
+</style>
