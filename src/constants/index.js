@@ -22,12 +22,12 @@ export const footerLinks = [
 ];
 
 export const stackImages = [
-  { id: 'python', title: 'Python', logoURL: pythonLogo , percentage: 95},
+  { id: 'python', title: 'Python', logoURL: pythonLogo , percentage: 100},
   { id: 'html', title: 'HTML', logoURL: htmlLogo, percentage: 100 },
-  { id: 'css', title: 'CSS', logoURL: cssLogo, percentage: 90 },
-  { id: 'tailwind', title: 'Tailwind', logoURL: tailwindLogo, percentage: 90},
-  { id: 'vue', title: 'Vue.js', logoURL: vueLogo, percentage: 95},
-  { id: 'react', title: 'React.js', logoURL: reactLogo, percentage: 95},
-  { id: 'laravel', title: 'Laravel', logoURL: laravelLogo, percentage: 93},
+  { id: 'css', title: 'CSS', logoURL: cssLogo, percentage: 100 },
+  { id: 'tailwind', title: 'Tailwind', logoURL: tailwindLogo, percentage: 100},
+  { id: 'vue', title: 'Vue.js', logoURL: vueLogo, percentage: 100},
+  { id: 'react', title: 'React.js', logoURL: reactLogo, percentage: 100},
+  { id: 'laravel', title: 'Laravel', logoURL: laravelLogo, percentage: 100},
   { id: 'fastapi', title: 'FastAPI', logoURL: fastapiLogo, percentage: 100},
 ];
